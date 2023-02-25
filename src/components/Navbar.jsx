@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
-import { Link,Routes,Route } from 'react-router-dom'
+import React from 'react'
+import { Link, Routes ,Route } from 'react-router-dom'
 import Home from './Home'
 import About from './About'
+import Search from './Search'
+import '../CSS/Navbar.css'
 
 function Navbar(props) {
   return (
@@ -14,9 +16,13 @@ function Navbar(props) {
         <Link class="nav-link" to="/about">About</Link>
       </li>
       <li class="nav-item">
-        <Link class="nav-link" to="/sabermas">Saber mas</Link>
+        <Link class="nav-link" to="/registrarse">Registrase</Link>
+      </li>
+      <li class="nav-item" >
+        <Link class="nav-link" to="/iniciarsesion">Iniciar sesion</Link>
       </li>
     </ul>
+    <Search/>
     <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
